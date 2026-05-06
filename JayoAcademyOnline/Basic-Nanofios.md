@@ -77,19 +77,6 @@ parent: "[[index|Cursos Online]]"
 - Maior controle manual
 - Base sólida para evolução técnica
 
-## 📂 Módulos Detalhados
-- [[Basic-Nanofios/01-introducao-e-jornada|01 — Introdução e Jornada]]
-- [[Basic-Nanofios/02-mentalidade-e-sucesso|02 — Mentalidade e Sucesso]]
-- [[Basic-Nanofios/03-higiene-e-biosseguranca|03 — Higiene e Biossegurança]]
-- [[Basic-Nanofios/04-pele-e-pigmento|04 — Pele e Pigmento]]
-- [[Basic-Nanofios/05-coordenacao-motora|05 — Coordenação Motora e Mentalidade do Artista]]
-- [[Basic-Nanofios/06-treino-de-pegada|06 — Treino de Pegada]]
-- [[Basic-Nanofios/07-arranjos-de-fios|07 — Arranjos de Fios]]
-- [[Basic-Nanofios/08-indutor-e-posicao-da-mao|08 — Indutor Manual e Posição da Mão]]
-- [[Basic-Nanofios/09-exercicios-e-inclinacoes|09 — Exercícios e Inclinações]]
-- [[Basic-Nanofios/10-tramas|10 — Tramas (Estrutura ABC)]]
-- [[Basic-Nanofios/11-pratica-em-modelo|11 — Prática em Modelo]]
-
 ## 🔗 Relacionados
 - [[Basic-Magic-Shadow]] — alternativa iniciante com dermógrafo
 - [[Fio-a-Fio-Realista]] — evolução em fio a fio com dermógrafo

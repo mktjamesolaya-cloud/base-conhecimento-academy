@@ -2,9 +2,9 @@
 
 ## Contexto do Projeto
 
-Base de conhecimento em Markdown para a IA **Athena**, gerada a partir de legendas VTT de cursos de micropigmentação da Jay Academy Online (JAO).
+Base de conhecimento em Markdown para a IA, gerada a partir de legendas VTT de cursos de micropigmentação da Jay Academy Online (JAO).
 
-O objetivo é que a Athena consulte esses arquivos e responda perguntas com base **exatamente no que o professor disse** — não em resumos ou interpretações minhas.
+O objetivo é que a IA consulte esses arquivos e responda perguntas com base **exatamente no que o professor disse** — não em resumos ou interpretações minhas.
 
 ---
 
@@ -26,14 +26,25 @@ A única transformação permitida além da estrutura de navegação é **limpez
 
 ```yaml
 ---
+title: "XX — Título do Módulo"
 curso: "Nome Exato do Curso"
 modulo: "XX — Título do Módulo"
-tags: [curso/slug-do-curso, tag1, tag2, tag3]
+tags:
+  - curso/slug-do-curso
+  - tecnica/slug-tecnica
+  - modulo/slug-modulo
+aliases:
+  - "Termo alternativo que a IA pode buscar"
+  - "Outro sinônimo técnico relevante"
 aulas:
   - nome_arquivo_vtt_sem_extensao
   - outro_arquivo_vtt_sem_extensao
 ---
 ```
+
+- `title`: título canônico do note — usado pelo Obsidian em graph view, backlinks e busca
+- `aliases`: nomes alternativos para busca — termos técnicos, sinônimos usados pelo professor, variações de ortografia
+- `tags`: hierarquia `curso/slug`, `tecnica/slug`, `modulo/slug` — permite filtro e agrupamento por tema
 
 ### Hierarquia de Cabeçalhos
 
@@ -41,15 +52,30 @@ aulas:
 # Título do Módulo — Nome do Curso        ← H1: um por arquivo
 
 ## Título da Aula                          ← H2: um por VTT de origem
-> Aula: nome_arquivo_vtt_sem_extensao     ← referência ao VTT
+> Aula: [[nome_arquivo_vtt_sem_extensao]] ← wikilink ao VTT fonte
 
 [conteúdo verbatim da aula]
 
 ---                                        ← separador entre aulas
 
 ## Próxima Aula
-> Aula: proximo_arquivo_vtt
+> Aula: [[proximo_arquivo_vtt]]
 ```
+
+### Bloco de navegação (final do arquivo)
+
+Ao final de cada arquivo, após o último separador `---`, adicionar bloco de navegação oculto com wikilinks:
+
+```markdown
+---
+
+%%
+Anterior: [[nome-arquivo-anterior|Título Anterior]]
+Próximo: [[nome-arquivo-proximo|Título Próximo]]
+%%
+```
+
+O bloco `%% ... %%` fica oculto na leitura mas é indexado pelo Obsidian para navegação e backlinks.
 
 ---
 
@@ -91,6 +117,10 @@ aulas:
 ❌ Não omitir Q&A, asides, repetições ou digressões do professor
 
 ❌ Não adicionar meus próprios títulos temáticos dentro do corpo do texto
+
+❌ Não usar callouts Obsidian (`> [!note]`, `> [!warning]`, etc.) no corpo — são estrutura editorial
+
+❌ Não usar embeds (`![[arquivo]]`) no corpo do texto — idem
 
 ---
 
@@ -181,11 +211,24 @@ A derme fica logo abaixo da epiderme, formada por um denso estroma fibro-elásti
 
 ### Arquivos fonte:
 
-- **BasicNanoFios VTTs**: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/Legendas/BasicNanoFios/`
-- **Lips-Sense VTTs**: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/Legendas/Lips-Sense/`
-- **ColorimetriaLips VTTs**: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/Legendas/ColorimetriaLips/`
+| Curso | VTTs | Qtde |
+|---|---|---|
+| Basic Nanofios | `Legendas/BasicNanoFios/` | 53 |
+| Lips-Sense | `Legendas/Lips-Sense/` | 62 |
+| Basic Shadow | `Legendas/Basic-Shadow/` | 73 |
+| Colorimetria Sobrancelhas | `Legendas/ColorimetriaSobrancelhas/` | 3 |
+| Colorimetria Lips | `Legendas/ColorimetriaLips/` | 4 |
+
+Raiz dos VTTs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/Legendas/`
 
 ### Arquivos de saída:
 
-- **BasicNanoFios MDs**: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/JayoAcademyOnline/Basic-Nanofios/`
-- **Lips-Sense MDs**: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/JayoAcademyOnline/Lips-Sense/`
+| Curso | MDs |
+|---|---|
+| Basic Nanofios | `JayoAcademyOnline/Basic-Nanofios/` |
+| Lips-Sense | `JayoAcademyOnline/Lips-Sense/` |
+| Basic Shadow | `JayoAcademyOnline/Basic-Shadow/` |
+| Colorimetria Sobrancelhas | `JayoAcademyOnline/ColorimetriaSobrancelhas/` |
+| Colorimetria Lips | `JayoAcademyOnline/ColorimetriaLips/` |
+
+Raiz dos MDs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/JayoAcademyOnline/`
