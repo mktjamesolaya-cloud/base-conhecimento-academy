@@ -16,7 +16,7 @@ aliases:
   - "Material de apoio Shadow"
 aulas:
   - "MOD01_00BemVindo_1."
-  - "mod01_02praquemecurso "
+  - mod01_02praquemecurso
   - mod01_07materialapoio
 ---
 
@@ -36,7 +36,7 @@ Bora para esse curso e bora arrasar os shadows perfeitos e ganhar muito dinheiro
 ---
 
 ## Para Quem É Este Curso
-> Aula: [[mod01_02praquemecurso ]]
+> Aula: [[mod01_02praquemecurso]]
 
 Antes de mais nada, assim como você, eu fiz uma pesquisa sobre os cursos online de micropigmentação básicos de shadow que nós temos aqui no nosso mercado e eu fiquei horrorizado com os conteúdos extremamente rasos, profissionais que possuem resultados realmente encantadores, mas que extremamente decepcionantes na hora de passar esse conhecimento.
 

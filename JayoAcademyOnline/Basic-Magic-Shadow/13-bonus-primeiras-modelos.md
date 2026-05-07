@@ -1,0 +1,89 @@
+---
+title: "13 — Bônus: Primeiras Modelos"
+curso: "Basic Magic Shadow"
+modulo: "13 — Bônus: Primeiras Modelos"
+tags:
+  - curso/basic-magic-shadow
+  - tecnica/sobrancelhas
+  - modulo/bonus-primeiras-modelos
+  - tema/primeiras-modelos
+  - tema/inicio-carreira
+  - tema/captacao-modelos
+aliases:
+  - "Como conseguir primeiras modelos micropigmentação"
+  - "Captação de modelos shadow"
+  - "Início carreira micropigmentação"
+aulas:
+  - "MOD13] Bonus - Conseguindo suas primeiras modelos"
+---
+
+# 13 — Bônus: Primeiras Modelos — Basic Magic Shadow
+
+## Conseguindo suas Primeiras Modelos
+
+> Aula: [[MOD13] Bonus - Conseguindo suas primeiras modelos]]
+
+Como conseguir as suas primeiras clientes? Olha só, esse vídeo é meio inusitado, porque eu estou atendendo a minha cliente. Enquanto eu vou atendendo a minha cliente, vou produzindo esse conteúdo aqui para explicar para você, que está começando agora na área da micropigmentação, como conseguir os seus primeiros clientes.
+
+Existem muitas maneiras de você fazer isso, com certeza. E eu acho até que o grande fator que impede você de conseguir os primeiros clientes, na verdade, eu acho que eu acredito, vendo o meu dia a dia, é que a maioria delas tem muita vergonha. Vergonha do resultado, tipo assim, não está feliz e satisfeito com o que está fazendo e fica com vergonha de oferecer aquilo que acha que não está bom. Mas como vai começar se não ter coragem e oferecer?
+
+Mas eu tenho uma estratégia para você que está começando nessa área, para você ter os seus primeiros clientes. A primeira coisa que eu faria é fazer um voucher, você pode até fazer no computador, eu pedi para aquele seu primo, seu filho, aquele seu amigo que manja de computador, fazer um voucherzinho, recrutando modelos para ser o seu primeiro cliente. Por que você tem que falar modelo? Porque você não pode falar para o seu cliente palavras horríveis, como tipo cobaia. Gente, cobaia a gente usa no laboratório, tem que descartar depois, faz sentido? Não dá para você falar, vem ser minha cobaia, até é feio, você não quer ser minha cobaia, vai querer sair correndo, vai soar uma coisa horrível. Então não é legal, tem que ser modelo. E modelo como? Para portfólio.
+
+Então você vai convidar pessoas para fazer a sua micropigmentação de graça, não vai cobrar nem R$1, porque você quer fazer um portfólio novo, você precisa de fotos de antes e depois. E como? Você vai fazer um voucher, vai caminhar pelo shopping, vai caminhar pelo mercado e vai ter a coragem de entregar e você pode falar assim, Oi, tudo bem? Desculpa te interromper, estou entregando um cartão para você que eu achei muito bonita, com todo o respeito, eu sou esteticista, eu sou micropigmentadora, já fala logo de cara, essa pessoa vai pensar que está cantando ela. Já fala assim, eu sou esteticista, sou micropigmentadora e eu achei linda a sua sobrancelha, mesmo que seja um caco, você tem que falar que achou bonita, porque senão a pessoa fala assim, Ela achou a minha sobrancelha bonita, eu quero melhorar a sua sobrancelha, estou buscando pessoas com o seu perfil para fazer uma micropigmentação gratuita para tirar foto, se você quiser ceder as suas fotos só do antes e depois, eu faço sem custo nenhum, está aqui o meu cartão, não fica explicando muito, entrega o cartão para a pessoa, só fala isso, pronto, acabou e vai embora, você não está vendendo nada, você fica ali conversando, conversando com a pessoa, é chato, ninguém que gosta de ser abordado, de repente é assim, é uma estratégia muito boa, eu aprendi com a Mary Kay, quando fui diretor da Mary Kay, fui treinado pela Eloisa Johnson, que é uma das maiores diretoras da Mary Kay hoje, diretora nacional da Mary Kay, fui treinando pessoalmente por ela e é uma estratégia extremamente que dá certo, é uma estratégia muito, muito boa.
+
+Essa é a primeira estratégia, buscar pessoas com voucher. Por que um voucher? Porque ali você vai ter seu telefone, seu espaço, seu local, acho que é mais seguro, traz uma coisa de profissionalismo para a pessoa, então traz essa questão do profissionalismo para a pessoa e vai te trazer um posicionamento, beleza, é importante você colocar o seu Instagram, o seu telefone, o endereço onde você vai estar lá e se você puder também colocar uma fotinha sua ali também traz uma presença para o resultado.
+
+Muito bem, essa é a primeira estratégia. E como que... Por onde que eu começo? Vou chegar da pessoa do nada? Você pode começar com pessoas que trabalham em comércio, por exemplo, que são pessoas próximas de você e principalmente que são pessoas que você acha que vai te indicar, então você também tem que colocar em uma folha de papel 30 nomes de pessoas, que também na sua cabeça é agora, que seriam boas pessoas para você ser modelo, mas você tem que escrever, porque dessas 30 pessoas que você colocar o nome, pelo menos umas 5 vão querer fazer, as outras 25 vão falar "Um dia a gente faz, vou ver", sabe aquela coisa do brasileiro? Vou ver, legal, deixa eu ver os resultados, são aquelas pessoas questionadoras, então você tem que colocar muitos nomes para você ter 5 pessoas que vão te dar essa oportunidade e você precisa de pelo menos 10 modelos para você praticar.
+
+O ideal é que você faça isso pelo menos uma ou duas por semana se você quiser avançar, mas se você quiser desenvolver rápido mesmo na técnica, era bom você fazer pelo menos uma por dia, se você tem essa oportunidade, uma por dia é muito bom, muito bom mesmo.
+
+Uma outra maneira de você recrutar pessoas para fazer o procedimento é através de indicação, você pode fazer parceria com cabeleireiros, ou profissionais da área da saúde, ou esteticistas, ou profissionais da área da beleza, como injetores, biomédicos, dentistas, médicos, para indicar pessoas para você fazer de graça, está começando e é a mesma narrativa, eu estou começando e eu preciso fazer pessoas, e como eu estou falando para vocês, fazer parceria com profissionais da área da saúde é um ótimo, pode ser com outros profissionais também, não precisa ser da saúde, se você tem um amigo ou uma amiga que trabalha com roupas, em comércio, XPTO, é uma coisa bem interessante.
+
+O sucesso começa com a sua articulação, você tem que ter movimentação, como a gente começa com essa movimentação? Falando para todo mundo, para todos os cantos que você está em uma área nova, que você está começando agora, que você precisa de ajuda, que você precisa de indicação, se você ficar quieto no seu espaço, esperando que as coisas vão cair do céu, não vai acontecer, não vai ter milagre, entendeu?
+
+Quando eu comecei a fazer micropigmentação, eu já tinha uma cartela muito boa de clientes de design de sobrancelhas. Então, eu fiquei, tipo assim, uns 14 anos de idade até os meus 17, 18 anos, quando eu fiz o meu curso de micro, fazendo só design de sobrancelhas e muita maquiagem, então eu tinha uma clientela bacaninha, só que eram clientes que eu cobrava R$10, R$15, R$25, quando era um caso muito complexo, só que quando eu comecei a fazer micropigmentação, o que eu fazia? Eu fazia o design de sobrancelhas e eu maquiava a pessoa, eu simulava como ia ficar a micropigmentação, naquela época só fazia o shadow, não fazia o fill a fill, geralmente a gente começa pelo shadow, que é mais fácil, e eu simulava ali com a maquiagem, a pessoa falava assim, nossa, que lindo que ficou isso e nem ficava tão bom assim, porque eu estava começando, mas aquela visão, aquilo que eu acho que é bom é diferente daquilo que a pessoa acha que é bom, às vezes a minha régua, o meu olhar é muito mais apurado, porque eu conheço, mas aquela pessoa que eu nunca vi, um pouquinho é muito, então comece assim, maquiando os seus clientes de design. É uma dica muito, muito boa e que eu faço até hoje, se eu simular aqui no cliente, o cliente fecha, não é verdade?
+
+Se eu simular, o cliente fecha, porque ele não tem noção de como vai ficar e ele tem muito medo de fazer isso, então como você conseguir os seus primeiros clientes é muito importante, daí assim, qual é a grande insight de tudo isso? Que você não pode esquecer de maneira alguma, quando você for fazer a tratativa do seu cliente, se você simular, você me fala, tá?
+
+Fio a fio, né? É, fio a fio, você tem que levar em consideração o seguinte, dá para suportar? Levar em consideração o seguinte, estou fazendo um microblading aqui, não tem tempo, gente, eu tenho que gravar aqui, pedir autorização para clientes maravilhosos ali no esquema, para ver se ela autorizava eu gravar esse conteúdo para vocês aqui, para subir nesse curso, em nome de Jesus Maria José, está difícil eu gravar, mas a gente tem que fazer como dá, porque isso aqui não é o perfeito, mas é o feito, não é verdade? Oremos.
+
+Então, a tratativa é o seguinte, voltando aqui, você tem que combinar com o seu cliente fazendo o seguinte, cliente modelo, porque você não está cobrando, na verdade, nada dela. Olha, estou fazendo sem custo essas sobrancelhas para a gente fazer fotos antes e depois, mas por favor, você não pode, em hipótese alguma, falar para as pessoas que eu fiz de graça, o meu preço é esse, eu cobro isso. Então, quando as pessoas perguntarem, nossa, que sobrancelha linda, foi a Joana Kelly Beauty Center que fez, entendeu? E a Joana Kelly é maravilhosa, um atendimento incrível, sensacional, nossa, um ser humano maravilhoso. E ela cobra um total de R$380 na primeira sessão, porque na segunda ela cobra R$100.
+
+Então, deixa o cliente explicar para outra pessoa e ele ser o vendedor, só que para isso acontecer, você precisa estipular, você precisa criar suas próprias regras para que isso possa acontecer. É muito importante este detalhe.
+
+Tudo isso vai acontecendo de maneira muito natural se você tiver perseverança. E o que é perseverança se você não continuar nadando, que uma hora você chega na praia? Então, é muito importante estes detalhes todos. Pedir apoio da família também é bem importante e saber que nem tudo é dinheiro, tem coisas que são intangíveis, tem coisas que não se pagam com dinheiro, mas sim com a sua mão, com o seu olhar, com o seu tempo, se você fosse parar para pensar, por exemplo, olha que narrativa.
+
+Se você fosse parar para pensar, quando uma pessoa começa em uma área, não importa qual área que seja, às vezes ela pensa em contratar uma agência de publicidade para me ajudar a divulgar o meu trabalho e beleza, vai lá e contrata essa agência de publicidade. Ela conversa com o gestor, conversa com o gerente de marketing, conversa com a agência e a primeira coisa que a agência fala é "Você tem materiais para a gente divulgar o seu trabalho?" Não é assim que funciona? Primeira coisa que ela vai perguntar, mas eu não tenho, então você tem que fazer o quê? Produzir e a melhor coisa que você pode fazer é produzir material publicitário, de graça, escolha suas maneiras fáceis, escolha peles fáceis, pessoas que você acha que são tranquilas, se for uma pessoa muito medrosa, esquece, se for uma pessoa muito receosa, esquece, se for uma pessoa muito dolorida, esquece, pegue pessoas mais tranquilas e como você descobre? Conversando com ela, não tem outra alternativa.
+
+Conversando, você é minha cliente desde Paulino, quantos anos já? Uns 10 anos? Uns 10 anos, está vendo? Quando a gente faz um bom trabalho, é aquela bela história, porque quando o mel é bom, a abelha sempre volta.
+
+A gente chegou a remover alguma vez? Não, só retocou mesmo. Via Virgin. Via Virgin, depois de alguns anos a gente fez de novo e é isso, e agora já está retocando, então é muito importante isso, porque quando você constrói esse relacionamento com o cliente, ele está sempre com você.
+
+Espero que vocês tenham aproveitado essa dica de como conseguir os seus primeiros clientes. Fique esperto que eu possa subir mais conteúdos lá no meu canal do YouTube e se você acha que ainda precisa de mais ajuda física, te convido a conhecer a nossa academia, a J Academy, que fica aqui em Campinas, no piso de baixo do meu espaço e eu tenho certeza que você vai se surpreender com a qualidade dos nossos cursos.
+
+O sucesso começa com a sua articulação, você tem que ter movimentação. Como a gente começa com essa movimentação? Falando para todo mundo, para todos os cantos que você está em uma área nova, que você está começando agora, que você precisa de ajuda, que você precisa de indicação, se você ficar quieto no seu espaço esperando que as coisas vão cair do céu, não vai acontecer, não vai ter milagre.
+
+Quando eu comecei a fazer micropigmentação, eu já tinha uma cartela muito boa de clientes de design de sobrancelhas. Eu fiquei uns 14 anos de idade até os meus 17, 18 anos, quando eu fiz o meu curso de micro, fazendo só design de sobrancelhas e muita maquiagem. Eu tinha uma clientela bacaninha, só que eram clientes que eu cobrava R$10, R$15, R$25, quando era um caso muito complexo. Só que, quando eu comecei a fazer micropigmentação, o que eu fazia? Eu fazia o design de sobrancelhas e eu maquiava a pessoa, eu simulava como ia ficar a micropigmentação. Naquela época, só fazia o shadow, não fazia o fill a fill, geralmente a gente começa pelo shadow, que é mais fácil, e eu simulava ali com a maquiagem e a pessoa falava assim, Nossa, que lindo que ficou isso e nem ficava tão bom assim, porque eu estava começando, mas aquela visão, aquilo que eu acho que é bom é diferente daquilo que a pessoa acha que é bom. Às vezes, a minha régua, o meu olhar é muito mais apurado, porque eu conheço, mas aquela pessoa que eu nunca vi é muito. Então, comece assim, maquiando os seus clientes de design.
+
+É uma dica muito, muito boa e que eu faço até hoje, se eu simular aqui no cliente, o cliente fecha, não é verdade? Se eu simular, o cliente fecha, porque ele não tem noção de como vai ficar e ele tem muito medo de fazer isso. Então, como você conseguir os seus primeiros clientes é muito importante, daí assim, qual é a grande insight de tudo isso, que você não pode esquecer de maneira alguma.
+
+Quando você for fazer a trata ativa do seu cliente, se você é investidor, você me fala, você tem que levar em consideração o seguinte, estou fazendo um microblading aqui, eu não tenho tempo, gente, eu tenho que gravar aqui, pedir autorização para clientes maravilhosos ali no esquema, para ver se ela autorizava eu gravar esse conteúdo para vocês aqui, para subir nesse curso, em nome de Zuma e José. Está difícil gravar, mas a gente tem que fazer como dá, porque isso aqui não é o perfeito, mas é o feito. Não é verdade? Oremos.
+
+Então, a tratativa é o seguinte, voltando aqui, você tem que combinar com o seu cliente fazendo o seguinte, cliente modelo, porque você não está cobrando, na verdade, nada dela. Olha, estou fazendo sem custo essas sobrancelhas para a gente fazer fotos antes e depois, mas, por favor, você não pode, em hipótese alguma, falar para as pessoas que eu fiz de graça. O meu preço é esse, eu cobro isso. Então, quando as pessoas perguntarem, nossa, que sobrancelha linda, foi Joana Kelly Beauty Center que fez, entendeu? E a Joana Kelly é maravilhosa, um atendimento incrível, sensacional, nossa, ser humano maravilhoso e ela cobra um total de R$380 na primeira sessão, porque a segunda ela cobra R$100.
+
+Então, deixa o cliente explicar para outra pessoa e ele ser o seu vendedor, só que, para isso acontecer, você precisa estipular, você precisa criar suas próprias regras, para que isso possa acontecer, é muito importante este detalhe.
+
+Tudo isso vai acontecendo de maneira muito natural, se você tiver perseverança e o que é perseverança se você não continuar nadando, continue nadando que uma hora você chega na praia. Então, é muito importante estes detalhes todos. Pedir apoio da família também é bem importante e saber que nem tudo é dinheiro, tem coisas que são intangíveis, tem coisas que não se pagam com dinheiro, mas sim com a sua mão, com o seu olhar, com o seu tempo, se você fosse parar para pensar, por exemplo, olha que narrativa, se você fosse parar para pensar, quando uma pessoa começa em uma área, não importa qual área que seja, às vezes ela pensa em contratar uma agência de publicidade para me ajudar a divulgar o meu trabalho e beleza, vai lá e contrata essa agência de publicidade. Ela conversa com o gestor, conversa com o gerente de marketing, conversa com a agência, a primeira coisa que a agência fala é, você tem materiais para a gente divulgar o seu trabalho? Não é assim que funciona? Daí a primeira coisa que ela vai perguntar, mas eu não tenho, então você vai ter que fazer o quê? Produzir.
+
+E a melhor coisa que você pode fazer é produzir material publicitário de graça, escolha suas modelos, escolha suas besteiras fáceis, escolha peles fáceis, pessoas que você acha que são tranquilas, se for uma pessoa muito medrosa, esquece, se for uma pessoa muito receosa, esquece, se for uma pessoa muito dolorida, esquece, pegue pessoas mais tranquilas e como você descobre? Conversando com elas. Não tem outra alternativa, é conversando, você é minha cliente desde Paulino, quantos anos já? Uns 10 anos? Uns 10 anos, está vendo? Quando a gente faz um bom trabalho, é aquela bela história, porque quando o mel é bom, a abelha sempre volta.
+
+A gente chegou a remover alguma vez? Não, só retocou mesmo. Via Virgin, depois de alguns anos a gente fez de novo e é isso, o Igor já está retocando, então é muito importante isso, porque quando você constrói esse relacionamento com o cliente, ele está sempre com você.
+
+Espero que vocês tenham aproveitado essa dica de como conseguir os seus primeiros clientes. Fique esperto que eu possa subir mais conteúdos lá no meu canal do YouTube e se você acha que ainda precisa de mais ajuda física, te convido a conhecer a nossa academia, a Jay Academy, que fica aqui em Campinas, no piso de baixo do meu espaço e eu tenho certeza que você vai se surpreender com a qualidade dos nossos cursos. Um beijo.
+
+---
+
+%%
+Anterior: [[12-em-modelo|12 — Em Modelo]]
+Próximo: [[bonus-design-para-micro|Bônus — Design para Micro]]
+%%
