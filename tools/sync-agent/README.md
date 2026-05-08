@@ -8,18 +8,19 @@ Esse diretório instala um **launchd agent** no macOS que vigia dois arquivos-tr
 
 ```
 ┌─ Claude (Cowork) ────────────┐        ┌─ launchd (macOS) ───────────┐
-│ usuário diz "sincroniza"     │        │ vigia .sync-trigger e       │
-│ ↓                            │ touch  │ .pull-trigger via WatchPaths│
-│ touch .sync-trigger          │ ─────▶ │ ↓                           │
-│ (dentro da pasta do repo)    │        │ chama trigger-handler.sh    │
-└──────────────────────────────┘        │ ↓                           │
-                                        │ trigger-handler.sh:         │
-                                        │  - lê msg do trigger        │
-                                        │  - apaga o trigger          │
-                                        │  - chama ./sync.sh "msg"    │
-                                        │  - loga em ~/Library/Logs   │
+│ usuário diz "sincroniza"     │        │ acorda a cada 2s            │
+│ ↓                            │  poll  │ (StartInterval) e checa se  │
+│ echo "msg" > .sync-trigger   │ ─────▶ │ tem trigger.                │
+│ (dentro da pasta do repo)    │        │ ↓                           │
+└──────────────────────────────┘        │ trigger-handler.sh:         │
+                                        │  - sem trigger → exit 0     │
+                                        │  - com trigger → lê msg,    │
+                                        │    apaga, chama ./sync.sh,  │
+                                        │    loga em ~/Library/Logs   │
                                         └─────────────────────────────┘
 ```
+
+**Por que polling e não `WatchPaths`?** O `WatchPaths` do launchd usa FSEvents do kernel macOS, e arquivos criados pelo mount do Cowork (de onde o Claude escreve) não geram FSEvents nativos — então o WatchPaths nunca dispararia. Polling de 2s funciona pra ambos os casos: trigger criado pelo sandbox **e** trigger criado manualmente do Terminal. O custo é ínfimo (handler sai em ~5ms quando não há trigger). O `WatchPaths` fica como atalho extra: se você criar o trigger do Terminal, dispara instantâneo (em paralelo ao polling).
 
 Dois triggers, dois comportamentos:
 

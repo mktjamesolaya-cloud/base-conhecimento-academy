@@ -28,13 +28,6 @@ log() {
   printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*" >> "$LOG_FILE"
 }
 
-# Lock baseado em mkdir (atômico no macOS, sem dependência de flock).
-if ! mkdir "$LOCK_DIR" 2>/dev/null; then
-  log "outro handler já está rodando ($LOCK_DIR existe). saindo."
-  exit 0
-fi
-trap 'rmdir "$LOCK_DIR" 2>/dev/null || true' EXIT
-
 if [ ! -d "$REPO_DIR" ]; then
   log "ERRO: REPO_DIR não existe: $REPO_DIR"
   exit 1
@@ -42,10 +35,34 @@ fi
 
 cd "$REPO_DIR"
 
+# Fast path: o agent é chamado em loop (StartInterval=2s no plist). Na
+# imensa maioria das execuções não tem trigger pra processar — saímos
+# silenciosamente sem nem pegar lock nem logar, pra não poluir o log.
+if [ ! -f .sync-trigger ] && [ ! -f .pull-trigger ]; then
+  exit 0
+fi
+
+# Tem algo pra processar. Pega o lock (atômico via mkdir).
+if ! mkdir "$LOCK_DIR" 2>/dev/null; then
+  log "outro handler ainda rodando ($LOCK_DIR existe), pulando essa rodada."
+  exit 0
+fi
+trap 'rmdir "$LOCK_DIR" 2>/dev/null || true' EXIT
+
+# Limpa .git/index.lock órfão — pode acontecer quando uma tentativa anterior
+# de git crashou ou foi feita por um processo (ex: sandbox) sem permissão de
+# remover o lock. Só removemos se o lock for antigo (>30s), pra não atropelar
+# um git em andamento.
+if [ -f .git/index.lock ]; then
+  lock_age=$(( $(date +%s) - $(stat -f %m .git/index.lock 2>/dev/null || echo 0) ))
+  if [ "$lock_age" -gt 30 ]; then
+    log "removendo .git/index.lock órfão (idade=${lock_age}s)"
+    rm -f .git/index.lock
+  fi
+fi
+
 PULL_TRIGGER=".pull-trigger"
 SYNC_TRIGGER=".sync-trigger"
-
-processou_algo=0
 
 # 1) pull-trigger primeiro (faz sentido puxar antes de empurrar)
 if [ -f "$PULL_TRIGGER" ]; then
@@ -56,7 +73,6 @@ if [ -f "$PULL_TRIGGER" ]; then
   else
     log "pull FALHOU (exit=$?). veja o log acima."
   fi
-  processou_algo=1
 fi
 
 # 2) sync-trigger (pull + commit + push)
@@ -80,9 +96,4 @@ if [ -f "$SYNC_TRIGGER" ]; then
       log "sync FALHOU (exit=$?). veja o log acima."
     fi
   fi
-  processou_algo=1
-fi
-
-if [ "$processou_algo" -eq 0 ]; then
-  log "trigger disparou mas nenhum arquivo .sync-trigger/.pull-trigger encontrado (provavelmente foi a deleção do próprio trigger)."
 fi

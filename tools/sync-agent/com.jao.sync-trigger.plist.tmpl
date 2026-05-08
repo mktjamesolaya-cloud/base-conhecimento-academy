@@ -11,6 +11,18 @@
         <string>__REPO_DIR__/tools/sync-agent/trigger-handler.sh</string>
     </array>
 
+    <!--
+      Usamos StartInterval (polling a cada 2s) ao invés de WatchPaths.
+      Razão: arquivos criados pelo mount do Cowork (sandbox do Claude) não
+      geram FSEvents do kernel macOS, então WatchPaths nunca dispararia
+      pra triggers vindos do chat. Polling resolve isso e custa quase nada
+      (handler sai em ~5ms quando não há trigger).
+      WatchPaths fica adicionalmente como atalho pra triggers criados
+      manualmente do Terminal — esses sim geram FSEvents e disparam imediato.
+    -->
+    <key>StartInterval</key>
+    <integer>2</integer>
+
     <key>WatchPaths</key>
     <array>
         <string>__REPO_DIR__/.sync-trigger</string>
