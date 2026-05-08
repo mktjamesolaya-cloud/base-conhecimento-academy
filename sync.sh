@@ -53,7 +53,10 @@ mostra_status() {
 
 faz_pull() {
   info "puxando mudanças do origin/main..."
-  if ! git pull --rebase origin main; then
+  # --autostash: estasha mudanças não-commitadas antes do rebase e desestasha
+  # depois — evita o erro "cannot pull with rebase: You have unstaged changes"
+  # quando há edições locais que ainda não foram commitadas.
+  if ! git pull --rebase --autostash origin main; then
     erro "git pull falhou — resolva os conflitos manualmente e rode 'git rebase --continue'"
     exit 1
   fi

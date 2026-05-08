@@ -12,13 +12,28 @@ Este projeto é compartilhado com a equipe via GitHub: `https://github.com/laffe
 
 ## Sincronização com GitHub (regra obrigatória de sessão)
 
-**Limitação técnica:** o sandbox do Cowork onde Claude roda comandos não tem permissão para escrever em `.git/`. Por isso, operações git (`pull`, `commit`, `push`) precisam ser executadas pelo usuário no Terminal do macOS, usando o script `sync.sh` na raiz do projeto.
+**Limitação técnica:** o sandbox do Cowork onde Claude roda comandos não tem permissão para escrever em `.git/`. Por isso, operações git (`pull`, `commit`, `push`) precisam ser executadas no Mac do usuário — seja manualmente via `./sync.sh`, seja automaticamente via launchd agent (ver `tools/sync-agent/`).
+
+### Modos de sincronização
+
+Existem dois modos. Claude detecta qual está em uso e age de acordo:
+
+**Modo automático (preferencial)** — o launchd agent está instalado e vigia dois arquivos-trigger na raiz do repo:
+
+- `.sync-trigger` → dispara `./sync.sh "<conteúdo>"` (pull + commit + push). Conteúdo do arquivo (primeira linha) vira a mensagem de commit; vazio = mensagem auto.
+- `.pull-trigger` → dispara `./sync.sh --pull`.
+
+Claude pode criar esses arquivos do sandbox (`echo "msg" > .sync-trigger`), porque eles ficam fora de `.git/`. O launchd reage em ~2 segundos.
+
+**Modo manual (fallback)** — sem o agent instalado, Claude pede ao usuário para rodar `./sync.sh` no Terminal.
+
+**Como Claude detecta o modo:** verifica se `~/Library/LaunchAgents/com.jao.sync-trigger.plist` existe (`ls ~/Library/LaunchAgents/com.jao.sync-trigger.plist 2>/dev/null` no bash do sandbox). Existe → modo automático. Não existe → modo manual.
 
 ### Fluxo obrigatório por sessão
 
 **No início de cada sessão**, antes de fazer qualquer edição em arquivos do projeto, Claude deve:
 
-1. Pedir ao usuário para rodar `./sync.sh --pull` no Terminal (puxa mudanças que a equipe fez desde a última sessão).
+1. Sempre pedir o pull manual: `./sync.sh --pull` no Terminal — o pull no início é manual mesmo no modo automático, porque Claude precisa do contexto atualizado *antes* de começar a editar (não dá pra editar e esperar o agent puxar depois).
 2. Aguardar a confirmação do usuário antes de continuar.
 3. Se o usuário pular esse passo, lembrá-lo de que pode haver conflitos com mudanças remotas.
 
@@ -26,8 +41,30 @@ Este projeto é compartilhado com a equipe via GitHub: `https://github.com/laffe
 
 1. Listar resumidamente os arquivos que foram criados/modificados.
 2. Sugerir uma mensagem de commit descritiva (ex: `"transcrever módulo 08 do Basic-Shadow"`).
-3. Pedir ao usuário para rodar `./sync.sh "mensagem do commit"` no Terminal — isso faz pull (rebase), add, commit e push.
-4. Confirmar com o usuário que o sync foi bem sucedido antes de encerrar.
+3. Disparar o sync:
+   - **Modo automático:** `echo "mensagem do commit" > .sync-trigger` (Claude faz, sem precisar do usuário).
+   - **Modo manual:** pedir ao usuário para rodar `./sync.sh "mensagem do commit"` no Terminal.
+4. Confirmar que o sync rodou — no modo automático, conferir o log em `~/Library/Logs/jao-sync-agent.log` e/ou pedir ao usuário um `git log -1` no Terminal.
+
+**Frases do usuário que disparam sync via chat (modo automático):**
+
+- "sincroniza", "sync", "manda pro github", "joga pro github" → `.sync-trigger`
+- "puxa do github", "atualiza do remoto", "puxa as mudanças" → `.pull-trigger`
+
+### Configurar sincronização automática em novo Mac
+
+Quando o usuário disser **"configurar sincronização"**, **"setup do sync"** ou similar, Claude deve orientar:
+
+1. Pré-requisito: o repo já clonado em `~/Downloads/PROJETOS_DEV/assistente-online` (ou outro caminho — Claude confirma onde) e `git push` manual já funcionando (PAT/keychain configurado).
+2. Pedir ao usuário para rodar no Terminal:
+   ```bash
+   cd ~/Downloads/PROJETOS_DEV/assistente-online
+   ./tools/sync-agent/install.sh
+   ```
+3. Confirmar que apareceu `agent carregado com sucesso.` no output.
+4. (Opcional) Pedir um teste: `echo "teste" > .sync-trigger` e checar o GitHub em ~5 segundos.
+
+Documentação detalhada em `tools/sync-agent/README.md`.
 
 ### Comandos do `sync.sh`
 
@@ -40,9 +77,10 @@ Este projeto é compartilhado com a equipe via GitHub: `https://github.com/laffe
 
 ### Regras adicionais
 
-- **Nunca** Claude deve fingir que executou git push se não conseguiu — sempre pede ao usuário.
+- **Nunca** Claude deve fingir que executou git push se não conseguiu — sempre confirma via log ou pede ao usuário.
 - Se houver conflito de merge no pull, Claude orienta o usuário a resolver no Terminal antes de continuar editando.
-- Mudanças experimentais ou que não devem ir para a equipe → Claude avisa antes para o usuário **não** rodar o sync.
+- Mudanças experimentais ou que não devem ir para a equipe → Claude avisa antes para o usuário **não** rodar o sync (e, no modo automático, **não** cria o trigger).
+- Os arquivos-trigger (`.sync-trigger`, `.pull-trigger`) estão no `.gitignore` e são locais de cada máquina — nunca devem ir pro repo.
 
 ---
 

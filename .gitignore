@@ -1,1 +1,5 @@
 .DS_Store
+
+# trigger files do sync-agent (ver tools/sync-agent/) — locais por máquina
+.sync-trigger
+.pull-trigger
