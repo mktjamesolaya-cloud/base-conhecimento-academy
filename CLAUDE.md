@@ -6,7 +6,7 @@ Base de conhecimento em Markdown para a IA, gerada a partir de legendas VTT de c
 
 O objetivo é que a IA consulte esses arquivos e responda perguntas com base **exatamente no que o professor disse** — não em resumos ou interpretações minhas.
 
-Este projeto é compartilhado com a equipe via GitHub: `https://github.com/lafferreira91/assistente-online.git`. Toda mudança precisa ir para a `main` para que a equipe veja.
+Este projeto é compartilhado com a equipe via GitHub: `https://github.com/mktjamesolaya-cloud/base-conhecimento-academy.git`. Toda mudança precisa ir para a `main` para que a equipe veja.
 
 ---
 
@@ -55,10 +55,10 @@ Claude pode criar esses arquivos do sandbox (`echo "msg" > .sync-trigger`), porq
 
 Quando o usuário disser **"configurar sincronização"**, **"setup do sync"** ou similar, Claude deve orientar:
 
-1. Pré-requisito: o repo já clonado em `~/Downloads/PROJETOS_DEV/assistente-online` (ou outro caminho — Claude confirma onde) e `git push` manual já funcionando (PAT/keychain configurado).
+1. Pré-requisito: o repo já clonado em `~/Downloads/PROJETOS_DEV/base-conhecimento-academy` (ou outro caminho — Claude confirma onde) e `git push` manual já funcionando (PAT/keychain configurado).
 2. Pedir ao usuário para rodar no Terminal:
    ```bash
-   cd ~/Downloads/PROJETOS_DEV/assistente-online
+   cd ~/Downloads/PROJETOS_DEV/base-conhecimento-academy
    ./tools/sync-agent/install.sh
    ```
 3. Confirmar que apareceu `agent carregado com sucesso.` no output.
@@ -295,7 +295,7 @@ A derme fica logo abaixo da epiderme, formada por um denso estroma fibro-elásti
 | Colorimetria Sobrancelhas | `Legendas/ColorimetriaSobrancelhas/` | 3 |
 | Colorimetria Lips | `Legendas/ColorimetriaLips/` | 4 |
 
-Raiz dos VTTs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/Legendas/`
+Raiz dos VTTs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/base-conhecimento-academy/Legendas/`
 
 ### Arquivos de saída:
 
@@ -307,4 +307,4 @@ Raiz dos VTTs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/Le
 | Colorimetria Sobrancelhas | `JayoAcademyOnline/ColorimetriaSobrancelhas/` |
 | Colorimetria Lips | `JayoAcademyOnline/ColorimetriaLips/` |
 
-Raiz dos MDs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/assistente-online/JayoAcademyOnline/`
+Raiz dos MDs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/base-conhecimento-academy/JayoAcademyOnline/`

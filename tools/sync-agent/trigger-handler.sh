@@ -15,7 +15,7 @@
 
 set -uo pipefail
 
-REPO_DIR="${REPO_DIR:-$HOME/Downloads/PROJETOS_DEV/assistente-online}"
+REPO_DIR="${REPO_DIR:-$HOME/Downloads/PROJETOS_DEV/base-conhecimento-academy}"
 LOG_FILE="$HOME/Library/Logs/jao-sync-agent.log"
 LOCK_DIR="/tmp/jao-sync-agent.lock"
 

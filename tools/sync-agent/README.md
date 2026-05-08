@@ -38,7 +38,7 @@ O conteúdo do `.sync-trigger` (primeira linha) vira a mensagem de commit. Vazio
 Pré-requisitos: o repo já clonado e com `git push`/`git pull` funcionando manualmente (autenticação via PAT/keychain ou SSH key já configurada).
 
 ```bash
-cd ~/Downloads/PROJETOS_DEV/assistente-online
+cd ~/Downloads/PROJETOS_DEV/base-conhecimento-academy
 ./tools/sync-agent/install.sh
 ```
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# sync.sh — sincronização do projeto assistente-online com o GitHub.
+# sync.sh — sincronização do projeto base-conhecimento-academy com o GitHub.
 #
 # Uso:
 #   ./sync.sh                              # pull + add + commit (auto) + push
