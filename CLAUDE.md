@@ -6,6 +6,44 @@ Base de conhecimento em Markdown para a IA, gerada a partir de legendas VTT de c
 
 O objetivo é que a IA consulte esses arquivos e responda perguntas com base **exatamente no que o professor disse** — não em resumos ou interpretações minhas.
 
+Este projeto é compartilhado com a equipe via GitHub: `https://github.com/lafferreira91/assistente-online.git`. Toda mudança precisa ir para a `main` para que a equipe veja.
+
+---
+
+## Sincronização com GitHub (regra obrigatória de sessão)
+
+**Limitação técnica:** o sandbox do Cowork onde Claude roda comandos não tem permissão para escrever em `.git/`. Por isso, operações git (`pull`, `commit`, `push`) precisam ser executadas pelo usuário no Terminal do macOS, usando o script `sync.sh` na raiz do projeto.
+
+### Fluxo obrigatório por sessão
+
+**No início de cada sessão**, antes de fazer qualquer edição em arquivos do projeto, Claude deve:
+
+1. Pedir ao usuário para rodar `./sync.sh --pull` no Terminal (puxa mudanças que a equipe fez desde a última sessão).
+2. Aguardar a confirmação do usuário antes de continuar.
+3. Se o usuário pular esse passo, lembrá-lo de que pode haver conflitos com mudanças remotas.
+
+**No final de cada sessão** (ou sempre que Claude terminar um bloco de trabalho relevante), Claude deve:
+
+1. Listar resumidamente os arquivos que foram criados/modificados.
+2. Sugerir uma mensagem de commit descritiva (ex: `"transcrever módulo 08 do Basic-Shadow"`).
+3. Pedir ao usuário para rodar `./sync.sh "mensagem do commit"` no Terminal — isso faz pull (rebase), add, commit e push.
+4. Confirmar com o usuário que o sync foi bem sucedido antes de encerrar.
+
+### Comandos do `sync.sh`
+
+| Comando | O que faz |
+|---|---|
+| `./sync.sh` | Pull + commit auto + push (uso padrão ao final da sessão) |
+| `./sync.sh "mensagem"` | Igual, mas com mensagem de commit customizada |
+| `./sync.sh --pull` | Só pull (uso no início da sessão) |
+| `./sync.sh --status` | Só mostra estado (não modifica nada) |
+
+### Regras adicionais
+
+- **Nunca** Claude deve fingir que executou git push se não conseguiu — sempre pede ao usuário.
+- Se houver conflito de merge no pull, Claude orienta o usuário a resolver no Terminal antes de continuar editando.
+- Mudanças experimentais ou que não devem ir para a equipe → Claude avisa antes para o usuário **não** rodar o sync.
+
 ---
 
 ## Regra Fundamental
