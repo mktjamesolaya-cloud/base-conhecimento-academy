@@ -53,14 +53,60 @@ mostra_status() {
 
 faz_pull() {
   info "puxando mudanças do origin/main..."
+
+  # Estratégia anti-conflito (pra equipe sem Terminal):
+  # 1. Cria uma branch de backup do estado atual ANTES do pull.
+  # 2. Tenta `git pull --rebase --autostash`.
+  # 3. Se der certo: apaga a branch de backup e segue.
+  # 4. Se der conflito: aborta rebase, salva mudanças não-commitadas em stash,
+  #    alinha main com origin/main (--hard reset), e deixa a branch de backup
+  #    como rede de proteção. Nada se perde — só fica num lugar diferente.
+
+  local backup_branch
+  backup_branch="backup/auto-$(date '+%Y%m%d-%H%M%S')"
+  # Cria a branch silenciosamente — se falhar (ex: nome duplicado), seguimos
+  # mesmo assim. O `|| true` evita que o set -e pare o script.
+  git branch "$backup_branch" 2>/dev/null || true
+
   # --autostash: estasha mudanças não-commitadas antes do rebase e desestasha
   # depois — evita o erro "cannot pull with rebase: You have unstaged changes"
   # quando há edições locais que ainda não foram commitadas.
-  if ! git pull --rebase --autostash origin main; then
-    erro "git pull falhou — resolva os conflitos manualmente e rode 'git rebase --continue'"
-    exit 1
+  if git pull --rebase --autostash origin main; then
+    info "pull concluído."
+    # Sem conflito: apaga a branch de backup pra não acumular lixo no repo.
+    git branch -D "$backup_branch" 2>/dev/null || true
+    return 0
   fi
-  info "pull concluído."
+
+  # --- recuperação automática de conflito ----------------------------------
+  warn "houve conflito durante o pull — iniciando recuperação automática..."
+
+  # Aborta qualquer rebase/merge em progresso pra liberar o repo.
+  git rebase --abort 2>/dev/null || true
+  git merge --abort  2>/dev/null || true
+
+  # Se sobrou alguma mudança não-commitada (autostash não conseguiu
+  # restaurar, por exemplo), salva em stash explícito antes do reset.
+  if ! (git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]); then
+    git stash push -u -m "auto-backup pre-reset $(date '+%Y%m%d-%H%M%S')" 2>/dev/null || true
+  fi
+
+  # Alinha main local com o remoto.
+  if ! git fetch origin main; then
+    erro "git fetch falhou após conflito — verifique conexão e autenticação."
+    erro "seu trabalho local está preservado na branch: $backup_branch"
+    return 1
+  fi
+  git reset --hard origin/main
+
+  warn "main local foi alinhado com origin/main."
+  warn "seu trabalho anterior foi preservado em:"
+  warn "  branch: $backup_branch"
+  warn "  stash:  rode 'git stash list' pra ver entradas 'auto-backup'"
+  warn ""
+  warn "pra recuperar essas mudanças, alguém com acesso ao Terminal precisa fazer merge manual."
+
+  return 0
 }
 
 faz_commit_e_push() {

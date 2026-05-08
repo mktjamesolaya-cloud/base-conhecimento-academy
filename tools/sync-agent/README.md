@@ -4,7 +4,28 @@ Esse diretório instala um **launchd agent** no macOS que vigia dois arquivos-tr
 
 ---
 
-## Como funciona
+## Pra equipe (sem Terminal)
+
+Se você não tem familiaridade com Terminal, é assim que se configura em um Mac novo:
+
+1. Garante que o repo `base-conhecimento-academy` já está clonado no Mac e o `git push` funciona (alguém da equipe já fez isso pra você, ou pede ajuda uma vez).
+2. Abre o Finder e vai até a pasta do repo.
+3. Acha o arquivo **`Setup-Sincronizacao.command`** na raiz.
+4. Dá **duplo-clique** nele.
+   - Se o macOS bloquear ("não foi possível abrir porque o desenvolvedor não pode ser verificado"): clique com **botão direito** no arquivo → "Abrir" → confirma "Abrir" no diálogo. Só precisa fazer isso na primeira vez.
+5. Uma janela de Terminal abre, roda alguns comandos sozinha, e mostra `agent carregado com sucesso.`
+6. Pode fechar a janela. Pronto.
+
+**A partir desse momento**, no Cowork você pode mandar mensagens como:
+
+- "sincroniza" / "manda pro github" → envia suas mudanças pra equipe.
+- "puxa do github" / "atualiza do remoto" → traz o que a equipe mandou.
+
+E o Claude faz tudo sozinho, sem você precisar abrir Terminal.
+
+---
+
+## Como funciona (parte técnica)
 
 ```
 ┌─ Claude (Cowork) ────────────┐        ┌─ launchd (macOS) ───────────┐
@@ -27,18 +48,38 @@ Dois triggers, dois comportamentos:
 | Arquivo | O que dispara | Quando o Claude cria |
 |---|---|---|
 | `.sync-trigger` | `./sync.sh "<conteúdo do arquivo>"` (pull + commit + push) | "sincroniza", "manda pro github", fim de sessão |
-| `.pull-trigger` | `./sync.sh --pull` (só pull) | "puxa do github", "atualiza" |
+| `.pull-trigger` | `./sync.sh --pull` (só pull) | "puxa do github", "atualiza", início de sessão |
 
 O conteúdo do `.sync-trigger` (primeira linha) vira a mensagem de commit. Vazio = mensagem automática gerada pelo `sync.sh`.
 
 ---
 
-## Instalação (uma vez por Mac)
+## Tratamento de conflitos
 
-Pré-requisitos: o repo já clonado e com `git push`/`git pull` funcionando manualmente (autenticação via PAT/keychain ou SSH key já configurada).
+O `sync.sh` cria uma branch `backup/auto-YYYYMMDD-HHMMSS` automaticamente antes de cada pull. Se o pull der conflito:
+
+1. Aborta o rebase em progresso.
+2. Salva mudanças não-commitadas em stash com label `auto-backup`.
+3. Alinha `main` local com `origin/main` (`reset --hard`).
+4. Loga onde tudo foi preservado.
+
+**Nada se perde** — só fica num lugar diferente. Pra recuperar trabalho que foi mandado pro backup, alguém com Terminal precisa rodar:
 
 ```bash
-cd ~/Downloads/PROJETOS_DEV/base-conhecimento-academy
+git checkout backup/auto-YYYYMMDD-HHMMSS
+# inspeciona o que tinha lá, copia o que importa, faz merge ou cherry-pick
+```
+
+Sem conflito, a branch de backup é apagada na hora pra não acumular.
+
+---
+
+## Instalação manual (fallback via Terminal)
+
+Se o `Setup-Sincronizacao.command` falhar por algum motivo, ou se você prefere Terminal:
+
+```bash
+cd /caminho/para/base-conhecimento-academy
 ./tools/sync-agent/install.sh
 ```
 
@@ -62,17 +103,6 @@ Em ~2 segundos o arquivo deve sumir e aparecer um commit novo no GitHub. Se não
 
 ---
 
-## Uso pelo chat com o Claude
-
-Frases que disparam o sync (Claude faz `touch` do trigger pra você):
-
-- "sincroniza" / "sync" / "manda pro github" → `.sync-trigger` (push completo)
-- "puxa do github" / "atualiza do remoto" → `.pull-trigger` (só pull)
-
-No fim de cada sessão, se houve edições, o Claude propõe a mensagem de commit e cria o `.sync-trigger` automaticamente.
-
----
-
 ## Logs
 
 Tudo cai em `~/Library/Logs/`:
@@ -80,7 +110,7 @@ Tudo cai em `~/Library/Logs/`:
 - `jao-sync-agent.log` — log estruturado do handler (o que mais importa)
 - `jao-sync-agent.stdout.log` / `.stderr.log` — saída crua do launchd (raramente útil)
 
-Comandos úteis:
+Comandos úteis (Terminal):
 
 ```bash
 tail -f ~/Library/Logs/jao-sync-agent.log    # acompanha em tempo real
@@ -124,7 +154,11 @@ E faz um `git push` manual uma vez pra cachear o PAT.
 
 ### "sync.sh: command not found" no log
 
-Provavelmente o handler não conseguiu achar o `sync.sh`. O `REPO_DIR` é setado pelo `install.sh` no plist — se você moveu a pasta do projeto, rode `./tools/sync-agent/install.sh` de novo na nova localização.
+Provavelmente o handler não conseguiu achar o `sync.sh`. O `REPO_DIR` é setado pelo `install.sh` no plist — se você moveu a pasta do projeto, dá duplo-clique no `Setup-Sincronizacao.command` de novo na nova localização.
+
+### "houve conflito durante o pull"
+
+O `sync.sh` automaticamente preservou seu trabalho em uma branch `backup/auto-XXX` (e possivelmente em um stash). Veja a seção "Tratamento de conflitos" acima — alguém com Terminal precisa fazer o merge manual.
 
 ### Reinstalar do zero
 
@@ -133,13 +167,16 @@ Provavelmente o handler não conseguiu achar o `sync.sh`. O `REPO_DIR` é setado
 ./tools/sync-agent/install.sh
 ```
 
+Ou simplesmente rode o `Setup-Sincronizacao.command` de novo (o `install.sh` é idempotente).
+
 ---
 
 ## Arquivos
 
 | Arquivo | Propósito |
 |---|---|
-| `install.sh` | Instalador (one-shot, idempotente) |
+| `../../Setup-Sincronizacao.command` | Instalador clicável pra equipe sem Terminal |
+| `install.sh` | Instalador via Terminal (one-shot, idempotente) |
 | `uninstall.sh` | Remove o agent |
 | `com.jao.sync-trigger.plist.tmpl` | Template do launchd com placeholders `__REPO_DIR__` e `__HOME__` |
 | `trigger-handler.sh` | Script chamado pelo launchd quando triggers aparecem |
