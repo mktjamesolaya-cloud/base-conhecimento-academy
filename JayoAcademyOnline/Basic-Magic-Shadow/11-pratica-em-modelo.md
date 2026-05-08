@@ -316,5 +316,5 @@ Olhando aqui, eu acho até que eu poderia dar uma entradinha aqui no shadow, mas
 
 %%
 Anterior: [[10-tecnica-completa|10 — Técnica Completa]]
-Próximo: [[12-retoque|12 — Retoque]]
+Próximo: [[12-em-modelo|12 — Em Modelo]]
 %%

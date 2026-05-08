@@ -151,6 +151,6 @@ Comecei pra dar um charme nessa área que tá mais carequinha, sabe? Um tomzinho
 ---
 
 %%
-Anterior: [[11-modelos|11 — Modelos]]
+Anterior: [[11-pratica-em-modelo|11 — Prática em Modelo]]
 Próximo: [[13-bonus-primeiras-modelos|13 — Bônus: Conseguindo suas Primeiras Modelos]]
 %%

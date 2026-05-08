@@ -187,6 +187,6 @@ Aquela que é bem parecida com o de ontem, lembra aquele lábio? É uma pessoa j
 ---
 
 %%
-Anterior: [[06-pratica-eva|06 — Prática EVA]]
+Anterior: [[07-pratica-eva-2|07 — Prática EVA 2]]
 Próximo: [[09-anestesico|09 — Anestésico]]
 %%

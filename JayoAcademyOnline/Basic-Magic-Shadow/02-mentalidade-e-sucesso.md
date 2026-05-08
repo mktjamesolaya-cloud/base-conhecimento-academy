@@ -182,6 +182,6 @@ Olha só, aproveite muito os treinos para você não ter medo técnico, porque o
 ---
 
 %%
-Anterior: [[01-introducao-e-boas-vindas|01 — Introdução e Boas-vindas]]
+Anterior: [[01-bem-vindo|01 — Bem-vindo ao Curso]]
 Próximo: [[03-higiene-e-biosseguranca|03 — Higiene e Biossegurança]]
 %%

@@ -74,5 +74,5 @@ Lembrando mais uma vez que cada aula, aonde eu estiver explicando, pode ser que 
 ---
 
 %%
-Próximo: [[02-shadow-tecnica|02 — Técnica Shadow]]
+Próximo: [[02-mentalidade-e-sucesso|02 — Mentalidade e Sucesso]]
 %%
