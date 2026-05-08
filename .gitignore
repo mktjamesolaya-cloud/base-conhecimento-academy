@@ -3,3 +3,8 @@
 # trigger files do sync-agent (ver tools/sync-agent/) — locais por máquina
 .sync-trigger
 .pull-trigger
+
+# Legendas (VTTs) — fontes para gerar os .md, não precisam ir pro repo.
+# Cada pessoa baixa as legendas localmente conforme precisa transcrever.
+# O sync.sh remove automaticamente do tracking arquivos que entrarem aqui.
+Legendas/

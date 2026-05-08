@@ -109,8 +109,32 @@ faz_pull() {
   return 0
 }
 
+untrack_arquivos_ignorados() {
+  # Remove do tracking arquivos que estão no .gitignore mas que já estão
+  # commitados (caso comum: alguém adicionou uma pasta ao .gitignore depois
+  # de já ter commitado arquivos dela).
+  #
+  # `git ls-files --cached --ignored --exclude-standard` lista exatamente
+  # esses arquivos. Se a saída for vazia, xargs com -r não roda nada.
+  #
+  # Idempotente: depois da primeira execução vira no-op.
+  local ignorados
+  ignorados=$(git ls-files --cached --ignored --exclude-standard 2>/dev/null || true)
+  if [ -n "$ignorados" ]; then
+    local n
+    n=$(printf '%s\n' "$ignorados" | wc -l | tr -d ' ')
+    info "removendo $n arquivo(s) trackeado(s) que agora estão no .gitignore..."
+    # Usa -z + xargs -0 pra lidar com nomes com espaços/unicode.
+    git ls-files --cached --ignored --exclude-standard -z | \
+      xargs -0 -r git rm --cached --quiet
+  fi
+}
+
 faz_commit_e_push() {
   local msg="${1:-}"
+
+  # Limpa arquivos trackeados que viraram ignorados (one-shot, idempotente).
+  untrack_arquivos_ignorados
 
   # nada a commitar?
   if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
