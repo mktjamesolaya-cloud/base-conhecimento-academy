@@ -83,6 +83,11 @@ parent: "[[index|Cursos Online]]"
 - Maior previsibilidade na cicatrização
 - Aumento de segurança técnica
 
+## 📚 Módulos transcritos
+- [[Fio-a-Fio-Realista/00-boas-vindas|00 — Boas-vindas]]
+- [[Fio-a-Fio-Realista/01-apresentacao-do-curso|01 — Apresentação do Curso]]
+- [[Fio-a-Fio-Realista/12-cuidados-pos-procedimento|12 — Cuidados Pós-Procedimento]]
+
 ## 🔗 Relacionados
 - [[Basic-Magic-Shadow]] — combina shadow como acabamento complementar
 - [[JAY-VOGUE-BROWS]] — evolução presencial avançada desta técnica
