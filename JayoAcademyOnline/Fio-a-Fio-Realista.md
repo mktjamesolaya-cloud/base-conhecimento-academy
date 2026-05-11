@@ -86,6 +86,9 @@ parent: "[[index|Cursos Online]]"
 ## 📚 Módulos transcritos
 - [[Fio-a-Fio-Realista/00-boas-vindas|00 — Boas-vindas]]
 - [[Fio-a-Fio-Realista/01-apresentacao-do-curso|01 — Apresentação do Curso]]
+- [[Fio-a-Fio-Realista/02-a-face-humana|02 — A Face Humana]]
+- [[Fio-a-Fio-Realista/03-designer-facial|03 — Designer Facial]]
+- [[Fio-a-Fio-Realista/04-mentalidade-do-micropigmentador|04 — A Mentalidade do Micropigmentador]]
 - [[Fio-a-Fio-Realista/12-cuidados-pos-procedimento|12 — Cuidados Pós-Procedimento]]
 
 ## 🔗 Relacionados
