@@ -89,6 +89,9 @@ parent: "[[index|Cursos Online]]"
 - [[Fio-a-Fio-Realista/02-a-face-humana|02 — A Face Humana]]
 - [[Fio-a-Fio-Realista/03-designer-facial|03 — Designer Facial]]
 - [[Fio-a-Fio-Realista/04-mentalidade-do-micropigmentador|04 — A Mentalidade do Micropigmentador]]
+- [[Fio-a-Fio-Realista/05-essencia-da-base|05 — Essência da Base]]
+- [[Fio-a-Fio-Realista/06-densidade|06 — Densidade]]
+- [[Fio-a-Fio-Realista/09-acabamento|09 — Acabamento]]
 - [[Fio-a-Fio-Realista/12-cuidados-pos-procedimento|12 — Cuidados Pós-Procedimento]]
 
 ## 🔗 Relacionados
