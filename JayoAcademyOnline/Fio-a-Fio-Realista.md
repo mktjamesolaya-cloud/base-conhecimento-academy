@@ -94,6 +94,8 @@ parent: "[[index|Cursos Online]]"
 - [[Fio-a-Fio-Realista/07-tecnica-de-implante|07 — Técnica de Implante]]
 - [[Fio-a-Fio-Realista/08-arquitetura-de-fios|08 — Arquitetura de Fios]]
 - [[Fio-a-Fio-Realista/09-acabamento|09 — Acabamento]]
+- [[Fio-a-Fio-Realista/10-exercicios-tecnicos|10 — Exercícios Técnicos]]
+- [[Fio-a-Fio-Realista/11-demonstracao-pratica-em-modelo|11 — Demonstração Prática em Modelo]]
 - [[Fio-a-Fio-Realista/12-cuidados-pos-procedimento|12 — Cuidados Pós-Procedimento]]
 
 ## 🔗 Relacionados
