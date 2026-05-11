@@ -91,6 +91,8 @@ parent: "[[index|Cursos Online]]"
 - [[Fio-a-Fio-Realista/04-mentalidade-do-micropigmentador|04 — A Mentalidade do Micropigmentador]]
 - [[Fio-a-Fio-Realista/05-essencia-da-base|05 — Essência da Base]]
 - [[Fio-a-Fio-Realista/06-densidade|06 — Densidade]]
+- [[Fio-a-Fio-Realista/07-tecnica-de-implante|07 — Técnica de Implante]]
+- [[Fio-a-Fio-Realista/08-arquitetura-de-fios|08 — Arquitetura de Fios]]
 - [[Fio-a-Fio-Realista/09-acabamento|09 — Acabamento]]
 - [[Fio-a-Fio-Realista/12-cuidados-pos-procedimento|12 — Cuidados Pós-Procedimento]]
 
