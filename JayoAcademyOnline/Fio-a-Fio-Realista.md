@@ -83,6 +83,9 @@ parent: "[[index|Cursos Online]]"
 - Maior previsibilidade na cicatrização
 - Aumento de segurança técnica
 
+## ✅ Status: Curso transcrito (13/13 módulos)
+- Bônus 01 — Colorimetria: usar como referência o curso separado [[ColorimetriaSobrancelhas]] (mesmo conteúdo).
+
 ## 📚 Módulos transcritos
 - [[Fio-a-Fio-Realista/00-boas-vindas|00 — Boas-vindas]]
 - [[Fio-a-Fio-Realista/01-apresentacao-do-curso|01 — Apresentação do Curso]]

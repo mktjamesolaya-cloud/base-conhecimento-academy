@@ -309,15 +309,17 @@ A derme fica logo abaixo da epiderme, formada por um denso estroma fibro-elásti
 
 ### Arquivos fonte:
 
-| Curso | VTTs | Qtde |
-|---|---|---|
-| Basic Nanofios | `Legendas/BasicNanoFios/` | 53 |
-| Lips-Sense | `Legendas/Lips-Sense/` | 62 |
-| Basic Shadow | `Legendas/Basic-Shadow/` | 73 |
-| Colorimetria Sobrancelhas | `Legendas/ColorimetriaSobrancelhas/` | 3 |
-| Colorimetria Lips | `Legendas/ColorimetriaLips/` | 4 |
+| Curso | VTTs | Qtde | Status |
+|---|---|---|---|
+| Basic Nanofios | `Legendas/BasicNanoFios/` | 53 | ✅ transcrito |
+| Lips-Sense | `Legendas/Lips-Sense/` | 62 | ✅ transcrito |
+| Basic Shadow | `Legendas/Basic-Shadow/` | 73 | ✅ transcrito (saída: `Basic-Magic-Shadow/`) |
+| Colorimetria Sobrancelhas | `Legendas/ColorimetriaSobrancelhas/` | 3 | ✅ transcrito |
+| Colorimetria Lips | `Legendas/ColorimetriaLips/` | 4 | ✅ transcrito |
+| Fio a Fio Realista (Dermógrafo) | `Legendas/FioRealista/` | 80 | ✅ transcrito (65 VTTs do curso oficial; bônus JamesFlix/Lives — 15 VTTs fora da lista oficial — não transcritos) |
+| Profissão Remove | `Legendas/ProfissaoRemove/` | 67 | ⏳ pendente |
 
-Raiz dos VTTs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/base-conhecimento-academy/Legendas/`
+Raiz dos VTTs: `/Users/lucasferreira/PROJETOS_DEV/base-conhecimento-academy/Legendas/`
 
 ### Arquivos de saída:
 
@@ -325,8 +327,11 @@ Raiz dos VTTs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/base-conhecimento-ac
 |---|---|
 | Basic Nanofios | `JayoAcademyOnline/Basic-Nanofios/` |
 | Lips-Sense | `JayoAcademyOnline/Lips-Sense/` |
-| Basic Shadow | `JayoAcademyOnline/Basic-Shadow/` |
+| Basic Magic Shadow | `JayoAcademyOnline/Basic-Magic-Shadow/` |
 | Colorimetria Sobrancelhas | `JayoAcademyOnline/ColorimetriaSobrancelhas/` |
 | Colorimetria Lips | `JayoAcademyOnline/ColorimetriaLips/` |
+| Fio a Fio Realista (Dermógrafo) | `JayoAcademyOnline/Fio-a-Fio-Realista/` |
 
-Raiz dos MDs: `/Users/lucasferreira/Downloads/PROJETOS_DEV/base-conhecimento-academy/JayoAcademyOnline/`
+Raiz dos MDs: `/Users/lucasferreira/PROJETOS_DEV/base-conhecimento-academy/JayoAcademyOnline/`
+
+> Bônus Colorimetria do curso Fio a Fio Realista: usar o curso separado `ColorimetriaSobrancelhas/` como referência (mesmo conteúdo).
