@@ -317,7 +317,7 @@ A derme fica logo abaixo da epiderme, formada por um denso estroma fibro-elásti
 | Colorimetria Sobrancelhas | `Legendas/ColorimetriaSobrancelhas/` | 3 | ✅ transcrito |
 | Colorimetria Lips | `Legendas/ColorimetriaLips/` | 4 | ✅ transcrito |
 | Fio a Fio Realista (Dermógrafo) | `Legendas/FioRealista/` | 80 | ✅ transcrito (65 VTTs do curso oficial; bônus JamesFlix/Lives — 15 VTTs fora da lista oficial — não transcritos) |
-| Profissão Remove | `Legendas/ProfissaoRemove/` | 67 | ⏳ pendente |
+| Profissão Remove | `Legendas/ProfissaoRemove/` | 67 | ✅ transcrito (12 módulos, todos os 67 VTTs) |
 
 Raiz dos VTTs: `/Users/lucasferreira/PROJETOS_DEV/base-conhecimento-academy/Legendas/`
 
@@ -331,6 +331,7 @@ Raiz dos VTTs: `/Users/lucasferreira/PROJETOS_DEV/base-conhecimento-academy/Lege
 | Colorimetria Sobrancelhas | `JayoAcademyOnline/ColorimetriaSobrancelhas/` |
 | Colorimetria Lips | `JayoAcademyOnline/ColorimetriaLips/` |
 | Fio a Fio Realista (Dermógrafo) | `JayoAcademyOnline/Fio-a-Fio-Realista/` |
+| Profissão Remove | `JayoAcademyOnline/Profissao-Remove/` |
 
 Raiz dos MDs: `/Users/lucasferreira/PROJETOS_DEV/base-conhecimento-academy/JayoAcademyOnline/`
 
